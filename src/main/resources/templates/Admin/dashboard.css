@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Sigmar+One&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -311,4 +314,29 @@ body{
     width: 100%;
     display: flex;
     margin-left: 10px;
+}
+
+/* Inventaris heading */
+#content #content-inventaris main .heading .bevestiging-button{
+    width: 190px;
+    height: 40px;
+    border-radius: 8px;
+    background: #E5FFAE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+#content #content-inventaris main .heading .bevestiging-button p{
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+#content #content-inventaris main .heading .bevestiging-button .bx{
+    font-size: 25px;
+    color: #000;
+}
+#content #content-inventaris main .heading{
+    display: flex;
+    justify-content: space-between;
 }
