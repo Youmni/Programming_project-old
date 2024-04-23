@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Kulim-park);
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+:root{
+    /* Font */
+    --Kulim-park: 'Kulim Park', sans-serif;
+    /* colors */
+    --rood: #FF0101;
+    --Wit: #FFFFFF;
+    --Grijs: #474747;
+    --Lichtgrijs: #BDBDBD;
+}
+
+html{
+    overflow-x: hidden;
+}
+body{
+    background: var(--Wit);
+    overflow-x: hidden;
+}
+
+
+/* Sidebar */
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 235px;
+    height: 100%;
+    z-index: 2000;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    border: 1px solid var(--Lichtgrijs);
+}
+#sidebar.hide{
+    width: 70px;
+}
+/* Sidebar-logo */
+#sidebar .logo{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    z-index: 500;
+    box-sizing: content-box;
+    margin-bottom: 40px;
+    gap: 15px;
+}
+#sidebar .logo img{
+    height: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+#sidebar .logo .line{
+    height: 50px;
+    width: 1.5px;
+    background: var(--rood);
+}
+#sidebar .logo .text-logo{
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#sidebar .logo .text-logo .text-top{
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--rood);
+}
+#sidebar .logo .text-logo .text-bottom{
+    font-size: 12px;
+    color: var(--Lichtgrijs);
+}
+/* Side-menu */
+#sidebar .side-menu{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#sidebar .side-menu .side-menu-text{
+    color: var(--Lichtgrijs);
+    font-size: 14px;
+    margin-left: 20px;
+}
+#sidebar .side-menu li{
+    height: 45px;
+    padding-left: 20px;
+    border-radius: 18px
+}
+#sidebar .side-menu li.active{
+    background: rgba(249, 0, 0, 0.2);
+    position: relative;
+}
+#sidebar .side-menu li.active a{
+    color: var(--rood);
+}
+#sidebar .side-menu li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: var(--Grijs);
+    overflow-x: hidden;
+}
+#sidebar .side-menu li a:hover{
+    color: var(--rood);
+}
+#sidebar .side-menu li a .bx{
+    display: flex;
+    justify-content: center;
+}
+/* Sidebar */
+
+/* Content */
+#content{
+    position: relative;
+    width: calc(100% - 235px);
+    left: 235px;
+    transition: .3s ease;
+    display: block;
+}
+#content .active-content{
+    display: none;
+}
+#sidebar.hide ~ #content{
+    width: calc(100% - 70px);
+    left: 70px;
+}
+/* Toggle button */
+.toggle-button{
+    position: absolute;
+    top: 70px;
+    left: 220px;
+    width: 30px;
+    height: 30px;
+    background: var(--rood);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+    cursor: pointer;
+}
+.toggle-button .bx{
+    font-size: 22px;
+    color: white;
+    rotate: 180deg;
+}
+.toggle-button.hide{
+    position: absolute;
+    top: 70px;
+    left: calc(220px - 166px);
+    width: 30px;
+    height: 30px;
+    background: var(--rood);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+    rotate: 180deg;
+    transition: 0.1s ease;
+}
+/* content-dashboard */
+
+#content main{
+    width: 100%;
+    padding: 20px 40px;
+}
+#content .hoofd-titel h1{
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    width: 197px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+#content .hoofd-titel{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#content  .hoofd-titel .ondertitel li{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+#content  .hoofd-titel .ondertitel li .bx{
+    color: var(--rood);
+}
+#content .hoofd-titel .ondertitel li a{
+    color: var(--Lichtgrijs);
+    font-size: 14px;
+    font-weight: 400;
+}
+#content #content-dashboard main .overzicht{
+    display: flex;
+    margin-left: 0px;
+    align-items: center;
+    margin: 30px;
+}
+#content #content-dashboard main .overzicht li {
+    width: 275px;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    position: relative;
+    border-right: 1px solid var(--Lichtgrijs);
+}
+#content #content-dashboard main .overzicht li a{
+    display: flex;
+    gap: 15px;
+    margin-left: 30px;
+    align-items: center;
+}
+#content #content-dashboard main .titel{
+    color: rgba(0,0,0,0.60);
+    font-size: 14px;
+    font-weight: 400;
+}
+#content #content-dashboard main .aantal{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+#content #content-dashboard main .overzicht .laatste-item-overzicht{
+    border: none;
+}
+#content #content-dashboard main h2{
+    display: flex;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#content #content-dashboard main .overzichten-content li{
+    display: flex;
+    width: 100px;
+    height: 150px;
+    align-items: center;
+    border: 1px solid rgba(129,129,129,0.20);
+    border-radius: 10px;
+}
+#content #content-dashboard main .overzichten-content li a{
+    display: flex;
+    flex-direction: column;
+    gap: 2px ;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+#content #content-dashboard main .overzichten-content li .bx{
+    font-size: 60px;
+}
+#content #content-dashboard main .overzichten-content .beschikbare-items{
+    background: rgba(4, 140, 17, 0.10);
+}
+#content #content-dashboard main .overzichten-content .beschikbare-items .bx{
+    color: green
+}
+#content #content-dashboard main .overzichten-content{
+    display: flex;
+    width: 548px;
+    height: 150px;
+    gap: 15px;
+    margin-left: 10px;
+}
+#content #content-dashboard main .overzichten-content li a .aantal{
+    display: flex;
+    margin-top: 10px;
+}
+#content #content-dashboard main .overzichten .overzicht-inventaris .redirection-lening , .overzicht-leningen .redirection-lening{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    color: rgba(35,35,35,0.48);
+    font-size: 13px;
+    font-weight: 400;
+}
+#content #content-dashboard main .overzichten .overzicht-inventaris, .overzicht-leningen{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+
+}
+#content #content-dashboard main .overzichten{
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+}
