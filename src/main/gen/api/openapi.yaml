@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  description: Programming_project API
+  title: Programming_project API
+  version: 1.0.0
+servers:
+- url: https://Programming_project
+paths:
+  /data:
+    get:
+      operationId: greeting
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      summary: GET data
+      x-accepts: '*/*'
+components:
+  schemas: {}
+
