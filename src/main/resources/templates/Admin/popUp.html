@@ -4,27 +4,27 @@
   <link href="https://fonts.cdnfonts.com/css/kulim-park" rel="stylesheet">
                 
     <style>
-        /* The Modal (background) */
+        /* pop up (background) */
         .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            display: none; 
+            position: fixed;
+            z-index: 1;
             left: 0;
             top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            width: 100%; 
+            height: 100%;
+            overflow: auto; 
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4); 
         }
 
-        /* Modal Content/Box */
+        /* pop up Content/Box */
         .modal-content {
             background-color: rgb(255, 255, 255);
-            margin: 15% auto; /* 15% from the top and centered */
+            margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 20%; /* Could be more or less, depending on screen size */
+            width: 20%; 
             border-radius: 1cap;
             text-align: center;
             font-family: 'Kulim Park', sans-serif;
@@ -34,15 +34,13 @@
 </head>
 <body>
 
-<h2>Confirmation Pop Up Example</h2>
+<!-- Trigger/Open pop up (has to be replaced) -->
+<button id="myBtn">Pop up</button>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-
-<!-- The Modal -->
+<!-- pop up -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
+  <!-- pop up content -->
   <div class="modal-content">
     <p>Are you sure you want to proceed?</p>
     <button id="confirmBtn">Confirm</button>
@@ -52,17 +50,17 @@
 </div>
 
 <script>
-// Get the modal
+// pop up
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
+// !!! FOR THE BUTTON THAT ACTIVATES THE POP UP (id has to be replaced)
 var btn = document.getElementById("myBtn");
 
-// Get the elements that close the modal
+// confirm and cancel button
 var confirmBtn = document.getElementById("confirmBtn");
 var cancelBtn = document.getElementById("cancelBtn");
 
-// When the user clicks the button, open the modal 
+// clicking -> opens pop up
 btn.onclick = function() {
   modal.style.display = "block";
 }
