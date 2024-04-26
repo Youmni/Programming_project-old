@@ -32,7 +32,17 @@ const sideBar = document.getElementById('sidebar')
 toggleButton.addEventListener('click', function(){
     sideBar.classList.toggle('hide')
     toggleButton.classList.toggle('hide')
+    var textElements = document.getElementsByClassName("text");
+    for (var i = 0; i < textElements.length; i++) {
+        if (sideBar.classList.contains('hide')) {
+            textElements[i].style.display = "none"; // to hide
+        } else {
+            textElements[i].style.display = "block"; // to show
+        }
+    }
 })
+// document.getElementsByClassName("text").style.display = "none"; // to hide
+// document.getElementsByClassName("text").style.display = "block"; // to show
 
 
 // test
