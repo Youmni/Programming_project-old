@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Table(name = "PRODUCTEN")
 public class Product {
 
     @Id
@@ -25,7 +26,7 @@ public class Product {
     private String status;
 
     @OneToMany(mappedBy = "product")
-    private Set<ProductReservaties> productreservaties = new HashSet<>();
+    private Set<ProductReservatie> productreservaties = new HashSet<>();
 
 
     public Product(int productID, ProductModel productModel, String productNaam, String status) {

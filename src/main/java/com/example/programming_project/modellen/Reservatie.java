@@ -9,6 +9,7 @@ import java.util.Set;
 
 
 @Entity
+@Table(name = "RESERVATIES")
 public class Reservatie {
 
     @Id
@@ -31,7 +32,7 @@ public class Reservatie {
     private LocalDate boekingDatum;
 
     @OneToMany(mappedBy = "reservatie")
-    private Set<ProductReservaties> productreservaties = new HashSet<>();
+    private Set<ProductReservatie> productreservaties = new HashSet<>();
 
     protected Reservatie(){}
 

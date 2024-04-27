@@ -1,7 +1,6 @@
 package com.example.programming_project.dao;
 
 import com.example.programming_project.modellen.Gebruiker;
-import com.example.programming_project.modellen.ProductReservaties;
 import com.example.programming_project.modellen.Reservatie;
 import org.springframework.data.repository.CrudRepository;
 

@@ -2,11 +2,10 @@ package com.example.programming_project.modellen;
 
 import jakarta.persistence.*;
 
-import jakarta.persistence.*;
-
 @Entity
 @IdClass(ProductReservatiesId.class)
-public class ProductReservaties {
+@Table(name = "PRODUCTRESERVATIES")
+public class ProductReservatie {
 
     @Id
     @ManyToOne
@@ -18,9 +17,9 @@ public class ProductReservaties {
     @JoinColumn(name = "Reservatienr", referencedColumnName = "Reservatienr")
     private Reservatie reservatie;
 
-    protected ProductReservaties(){}
+    protected ProductReservatie(){}
 
-    public ProductReservaties(Product product, Reservatie reservatie) {
+    public ProductReservatie(Product product, Reservatie reservatie) {
         this.product = product;
         this.reservatie = reservatie;
     }

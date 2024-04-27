@@ -1,9 +1,7 @@
 package com.example.programming_project.dao;
 
-import com.example.programming_project.modellen.Categorie;
 import com.example.programming_project.modellen.Product;
 import com.example.programming_project.modellen.ProductModel;
-import com.example.programming_project.modellen.Reservatie;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
