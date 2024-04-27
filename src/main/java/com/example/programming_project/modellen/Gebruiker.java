@@ -54,7 +54,7 @@ public class Gebruiker {
         return gebruikerID;
     }
 
-    void setGebruikerID(int gebruikerID) {
+    public void setGebruikerID(int gebruikerID) {
         this.gebruikerID = gebruikerID;
     }
 
@@ -62,7 +62,7 @@ public class Gebruiker {
         return email;
     }
 
-    void setEmail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -70,7 +70,7 @@ public class Gebruiker {
         return wachtwoord;
     }
 
-    void setWachtwoord(String wachtwoord) {
+    public void setWachtwoord(String wachtwoord) {
         this.wachtwoord = wachtwoord;
     }
 
@@ -78,7 +78,7 @@ public class Gebruiker {
         return titel;
     }
 
-    void setTitel(String titel) {
+    public void setTitel(String titel) {
         this.titel = titel;
     }
 }

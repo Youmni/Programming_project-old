@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProductModelCrudRepository extends CrudRepository<ProductModel, Integer> {
     public List<ProductModel> findByProductModelNr(int productModelNr);
-    public List<ProductModel> findByProductModelNaam(String productModelNaam);
-    public List<ProductModel> findByProductModelMerk (String productModelMerk);
+    public List<ProductModel> findByProductModelNaamContainingIgnoreCase(String productModelNaam);
+    public List<ProductModel> findByProductModelMerkContainingIgnoreCase(String productModelMerk);
     public List<ProductModel> findByCategorie(Categorie categorie);
 }

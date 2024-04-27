@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 
 @Entity
 @IdClass(ProductReservatiesId.class)
-@Table(name = "PRODUCTRESERVATIES")
+@Table(name = "PRODUCTENRESERVATIES")
 public class ProductReservatie {
 
     @Id
     @ManyToOne
-    @JoinColumn(name = "Productnr", referencedColumnName = "Productid")
+    @JoinColumn(name = "Productid", referencedColumnName = "Productid")
     private Product product;
 
     @Id

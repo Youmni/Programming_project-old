@@ -28,6 +28,12 @@ public class Reservatie {
     @Column(name="Retourdatum")
     private LocalDate retourDatum;
 
+    //@Column(name="Reden")
+    //private String reden;
+
+    //@Column(name="Opmerking")
+    //private String opmerking;
+
     @Column(name="Boekingdatum")
     private LocalDate boekingDatum;
 
@@ -59,7 +65,7 @@ public class Reservatie {
         return reservatieNr;
     }
 
-    void setReservatieNr(int reservatieNr) {
+    public void setReservatieNr(int reservatieNr) {
         this.reservatieNr = reservatieNr;
     }
 
@@ -67,7 +73,7 @@ public class Reservatie {
         return gebruiker;
     }
 
-    void setGebruikerID(Gebruiker gebruiker) {
+    public void setGebruikerID(Gebruiker gebruiker) {
         this.gebruiker = gebruiker;
     }
 
@@ -75,7 +81,7 @@ public class Reservatie {
         return afhaalDatum;
     }
 
-    void setAfhaalDatum(LocalDate afhaalDatum) {
+    public void setAfhaalDatum(LocalDate afhaalDatum) {
         this.afhaalDatum = afhaalDatum;
     }
 
@@ -83,7 +89,7 @@ public class Reservatie {
         return retourDatum;
     }
 
-    void setRetourDatum(LocalDate retourDatum) {
+    public void setRetourDatum(LocalDate retourDatum) {
         this.retourDatum = retourDatum;
     }
 
@@ -91,7 +97,7 @@ public class Reservatie {
         return boekingDatum;
     }
 
-    void setBoekingDatum(LocalDate boekingDatum) {
+    public void setBoekingDatum(LocalDate boekingDatum) {
         this.boekingDatum = boekingDatum;
     }
 }

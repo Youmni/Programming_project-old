@@ -38,7 +38,7 @@ public class Categorie {
         return categorieNr;
     }
 
-    void setCategorieNr(int categorieNr) {
+    public void setCategorieNr(int categorieNr) {
         this.categorieNr = categorieNr;
     }
 
@@ -46,7 +46,7 @@ public class Categorie {
         return categorieNaam;
     }
 
-    void setCategorieNaam(String categorieNaam) {
+    public void setCategorieNaam(String categorieNaam) {
         this.categorieNaam = categorieNaam;
     }
 }

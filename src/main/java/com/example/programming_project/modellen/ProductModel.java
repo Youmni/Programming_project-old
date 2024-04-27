@@ -61,16 +61,15 @@ public class ProductModel {
         return productModelNr;
     }
 
-    void setProductModelNr(int productModelNr) {
+    public void setProductModelNr(int productModelNr) {
         this.productModelNr = productModelNr;
     }
-
 
     public String getProductModelNaam() {
         return productModelNaam;
     }
 
-    void setProductModelNaam(String productModelNaam) {
+    public void setProductModelNaam(String productModelNaam) {
         this.productModelNaam = productModelNaam;
     }
 
@@ -78,7 +77,7 @@ public class ProductModel {
         return productModelMerk;
     }
 
-    void setProductModelMerk(String productModelMerk) {
+    public void setProductModelMerk(String productModelMerk) {
         this.productModelMerk = productModelMerk;
     }
 
@@ -86,7 +85,7 @@ public class ProductModel {
         return productModelFoto;
     }
 
-    void setProductModelFoto(String productModelFoto) {
+    public void setProductModelFoto(String productModelFoto) {
         this.productModelFoto = productModelFoto;
     }
 
@@ -94,7 +93,7 @@ public class ProductModel {
         return productModelBeschrijving;
     }
 
-    void setProductModelBeschrijving(String productModelBeschrijving) {
+    public void setProductModelBeschrijving(String productModelBeschrijving) {
         this.productModelBeschrijving = productModelBeschrijving;
     }
 }

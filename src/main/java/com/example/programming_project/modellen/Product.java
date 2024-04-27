@@ -52,7 +52,7 @@ public class Product {
         return productID;
     }
 
-    void setProductID(int productID) {
+    public void setProductID(int productID) {
         this.productID = productID;
     }
 
@@ -60,7 +60,7 @@ public class Product {
         return productModel;
     }
 
-    void setProductModelNr(ProductModel productModel) {
+    public void setProductModelNr(ProductModel productModel) {
         this.productModel = productModel;
     }
 
@@ -68,7 +68,7 @@ public class Product {
         return productNaam;
     }
 
-    void setProductNaam(String productNaam) {
+    public void setProductNaam(String productNaam) {
         this.productNaam = productNaam;
     }
 
@@ -76,7 +76,7 @@ public class Product {
         return status;
     }
 
-    void setStatus(String status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }
