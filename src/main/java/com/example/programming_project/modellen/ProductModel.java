@@ -16,7 +16,7 @@ public class ProductModel {
     private int productModelNr;
 
     @ManyToOne
-    @JoinColumn(name = "categorieNr", nullable = false)
+    @JoinColumn(name = "Categorienr", nullable = false)
     private Categorie categorie;
 
     @Column(name="Productmodelnaam")
