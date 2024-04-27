@@ -4,6 +4,7 @@ const contentDashboard = document.getElementById('content-dashboard')
 const contentInventaris = document.getElementById('content-inventaris')
 const text = document.querySelectorAll('#sidebar .side-menu span')
 
+fetch("http://localhost:8080/producten/docent").then(data => data.json()).then(data => console.log(data));
 sideMenu.forEach(item => {
     const li = item;
     li.addEventListener('click', function(){
