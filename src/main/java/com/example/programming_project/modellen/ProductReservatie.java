@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @IdClass(ProductReservatiesId.class)
-@Table(name = "PRODUCTENRESERVATIES")
+@Table(name = "PRODUCTRESERVATIES")
 public class ProductReservatie {
 
     @Id
