@@ -82,4 +82,5 @@ ALTER SESSION set nls_date_format='DD/MM/YYYY';
 
 INSERT INTO PRODUCTRESERVATIES (Productid, Reservatienr) VALUES (25,1);
 INSERT INTO PRODUCTRESERVATIES (Productid, Reservatienr) VALUES (44,1);
+COMMIT;
 
