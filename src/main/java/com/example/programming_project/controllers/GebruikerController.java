@@ -26,11 +26,46 @@ public class GebruikerController {
         return gebruikerMandje;
     }
 
+
+
     @CrossOrigin
     @GetMapping(value = "/email={email}")
     public List<Gebruiker> getAllGebruikersByEmail(@PathVariable(name = "email") String email){
 
         return repo.findByEmailContainingIgnoreCase(email);
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/studentaantal")
+    public int getAllStudententenNumber(){
+        Iterable<Gebruiker> aantalStudenten = repo.findByTitel("student");
+        int aantal = 0;
+        for(Gebruiker student: aantalStudenten){
+            aantal++;
+        }
+        return aantal;
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/docentaantal")
+    public int getAllDocentenNumber(){
+        Iterable<Gebruiker> aantalDocenten = repo.findByTitel("docent");
+        int aantal = 0;
+        for(Gebruiker docent: aantalDocenten){
+            aantal++;
+        }
+        return aantal;
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/gebruikersaantal")
+    public int getAllGebruikersNumber(){
+        Iterable<Gebruiker> aantalGebruikers = repo.findAll();
+        int aantal = 0;
+        for(Gebruiker gebruik: aantalGebruikers){
+            aantal++;
+        }
+        return aantal;
     }
 
     @CrossOrigin

@@ -33,8 +33,8 @@ Hieronder kunnen alle URL's terug gevonden worden die nodig zijn voor het ophale
 -Om te zoeken op product ID: "http://localhost:8080/product/id={VulIn}"
 -Om te zoeken op productnaam: "http://localhost:8080/product/naam={VulIn}"
 -Om te zoeken op status: "http://localhost:8080/product/status={VulIn}"
--Om te zoeken op naam en op status: {momenteel niet beschikbaar}
--Om te zoeken op id en op status: {momenteel niet beschikbaar}
+-Om te zoeken op naam en op status: "http://localhost:8080/product/naam={VulIn}/status={VulIn}"
+-Om te zoeken op id en op status: "http://localhost:8080/product/id={VulIn}/status={VulIn}"
 
 ## ProductModellen
 

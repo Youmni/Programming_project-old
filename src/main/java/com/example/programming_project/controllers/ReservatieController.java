@@ -34,11 +34,11 @@ public class ReservatieController {
         return repo.findByReservatieNr(id);
     }
 
-    //@CrossOrigin
-    //@GetMapping(value = "/gebruikerId={id}")
-    //public List<Reservatie> getAllReservatiesByGebruikerId(@PathVariable(name = "gebruiker") Gebruiker gebruiker) {
-    //    return repo.findByGebruiker(gebruiker);
-    //}
+    @CrossOrigin
+    @GetMapping(value = "/gebruikerId={id}")
+    public List<Reservatie> getAllReservatiesByGebruikerId(@PathVariable(name = "gebruiker") Gebruiker gebruiker) {
+        return repo.findByGebruiker(gebruiker);
+    }
 
     @CrossOrigin
     @GetMapping(value = "/afhaaldatum={date}")

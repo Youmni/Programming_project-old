@@ -25,6 +25,14 @@ public class Gebruiker {
     @Column(name="Titel")
     private String titel;
 
+    @Column(name="Blacklist")
+    private String blacklist;
+
+    @Column(name="Blacklistreden")
+    private String blacklistReden;
+
+
+
     @OneToMany(mappedBy = "gebruiker")
     private Set<Reservatie> reservaties= new HashSet<>();
 

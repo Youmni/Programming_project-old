@@ -54,7 +54,7 @@ public class Reservatie {
     public String toString() {
         return "Reservatie{" +
                 "reservatieNr=" + reservatieNr +
-                ", gebruikerID=" + gebruiker.getGebruikerID() +
+                ", gebruiker=" + gebruiker +
                 ", afhaalDatum=" + afhaalDatum +
                 ", retourDatum=" + retourDatum +
                 ", boekingDatum=" + boekingDatum +
