@@ -57,3 +57,6 @@ Hieronder kunnen alle URL's terug gevonden worden die nodig zijn voor het ophale
 -Om te zoeken op afhaalDatum: "http://localhost:8080/reservatie/afhaaldatum={VulIn}"
 -Om te zoeken op retourDatum: "http://localhost:8080/reservatie/retourDatum={VulIn}"
 -Om te zoeken op boekingDatum: "http://localhost:8080/reservatie/boekingDatum={VulIn}"
+-Om te zoeken op status:
+    -in orde: "http://localhost:8080/reservatie/in-orde"
+    -te laat: "http://localhost:8080/reservatie/te-laat"

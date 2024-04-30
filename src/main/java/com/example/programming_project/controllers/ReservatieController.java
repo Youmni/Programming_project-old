@@ -58,4 +58,26 @@ public class ReservatieController {
         return repo.findByBoekingDatum(date);
     }
 
+    @CrossOrigin
+    @GetMapping(value = "/in-orde")
+    public int getAllInOrde(){
+        Iterable<Reservatie> aantalInOrde = repo.findByStatus("in orde");
+        int aantal = 0;
+        for(Reservatie inOrde: aantalInOrde){
+            aantal++;
+        }
+        return aantal;
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/te-laat")
+    public int getAllTeLaat(){
+        Iterable<Reservatie> aantalTeLaat = repo.findByStatus("te laat");
+        int aantal = 0;
+        for(Reservatie teLaat: aantalTeLaat){
+            aantal++;
+        }
+        return aantal;
+    }
+
 }

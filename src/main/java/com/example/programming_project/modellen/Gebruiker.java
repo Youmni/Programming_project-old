@@ -36,26 +36,17 @@ public class Gebruiker {
     @OneToMany(mappedBy = "gebruiker")
     private Set<Reservatie> reservaties= new HashSet<>();
 
-    public Gebruiker(int gebruikerID, String email, String wachtwoord, String titel) {
+    public Gebruiker(int gebruikerID, String email, String wachtwoord, String titel, String blacklist, String blacklistReden) {
         this.gebruikerID = gebruikerID;
         this.email = email;
         this.wachtwoord = wachtwoord;
         this.titel = titel;
+        this.blacklist = blacklist;
+        this.blacklistReden = blacklistReden;
     }
-
 
     protected Gebruiker() {
 
-    }
-
-    @Override
-    public String toString() {
-        return "Gebruiker{" +
-                "gebruikerID=" + gebruikerID +
-                ", email='" + email + '\'' +
-                ", wachtwoord='" + wachtwoord + '\'' +
-                ", titel='" + titel + '\'' +
-                '}';
     }
 
     public int getGebruikerID() {
