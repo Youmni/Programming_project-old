@@ -4,6 +4,7 @@ import com.example.programming_project.dao.CategorieCrudRepository;
 import com.example.programming_project.dao.GebruikerCrudRepository;
 import com.example.programming_project.modellen.Categorie;
 import com.example.programming_project.modellen.Gebruiker;
+import com.example.programming_project.modellen.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,6 +67,23 @@ public class GebruikerController {
             aantal++;
         }
         return aantal;
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/blacklistaantal")
+    public int getAllBlacklistNumber(){
+        Iterable<Gebruiker> aantalgeblacklist = repo.findByBlacklist("ja");
+        int aantal = 0;
+        for(Gebruiker blacklisted: aantalgeblacklist){
+            aantal++;
+        }
+        return aantal;
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/blacklistnaam")
+    public List<Gebruiker> getAllBlacklistNaam(){
+        return repo.findByBlacklist("ja");
     }
 
     @CrossOrigin

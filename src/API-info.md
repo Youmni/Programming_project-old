@@ -35,6 +35,11 @@ Hieronder kunnen alle URL's terug gevonden worden die nodig zijn voor het ophale
 -Om te zoeken op status: "http://localhost:8080/product/status={VulIn}"
 -Om te zoeken op naam en op status: "http://localhost:8080/product/naam={VulIn}/status={VulIn}"
 -Om te zoeken op id en op status: "http://localhost:8080/product/id={VulIn}/status={VulIn}"
+-om het aantal beschikbare producten te zien: "http://localhost:8080/product/beschikbaaraantal"
+-om het aantal gereserveerde producten te zien: "http://localhost:8080/product/gereserveerdaantal"
+-om het aantal uitgeleende producten te zien: "http://localhost:8080/product/uitgeleenddaantal"
+-om te zien wie er geblacklist is: "http://localhost:8080/gebruiker/blacklistnaam"0
+-om het aantal geblacklisten te zien: "http://localhost:8080/gebruiker/blacklistaantal"
 
 ## ProductModellen
 

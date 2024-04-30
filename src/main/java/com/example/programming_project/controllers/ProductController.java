@@ -29,6 +29,40 @@ public class ProductController {
         }
 
         @CrossOrigin
+        @GetMapping(value = "/beschikbaaraantal")
+        public int getAllBeschikbaarNumber(){
+            Iterable<Product> aantalBeschikbaar = repo.findByStatusIgnoreCase("beschikbaar");
+            int aantal = 0;
+            for(Product beschikbaar: aantalBeschikbaar){
+                aantal++;
+            }
+            return aantal;
+        }
+
+        @CrossOrigin
+        @GetMapping(value = "/gereserveerdaantal")
+        public int getAllGereserveerdNumber(){
+            Iterable<Product> aantalGereserveerd = repo.findByStatusIgnoreCase("gereserveerd");
+            int aantal = 0;
+            for(Product gereserveerd: aantalGereserveerd){
+                aantal++;
+            }
+            return aantal;
+        }
+
+        @CrossOrigin
+        @GetMapping(value = "/uitgeleenddaantal")
+        public int getAllUitgeleendNumber(){
+            Iterable<Product> aantalUitgeleend = repo.findByStatusIgnoreCase("uitgeleend");
+            int aantal = 0;
+            for(Product uitgeleend: aantalUitgeleend){
+                aantal++;
+            }
+            return aantal;
+        }
+
+
+        @CrossOrigin
         @GetMapping(value = "/id={id}")
         public List<Product> getAllProductenById(@PathVariable(name = "id") int id){
             return repo.findByProductID(id);
