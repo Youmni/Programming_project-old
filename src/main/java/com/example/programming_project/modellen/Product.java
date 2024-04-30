@@ -38,15 +38,6 @@ public class Product {
 
     protected Product() {}
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productID=" + productID +
-                ", productModelNr=" + productModel.getProductModelNr() +
-                ", productNaam='" + productNaam + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
 
     public int getProductID() {
         return productID;

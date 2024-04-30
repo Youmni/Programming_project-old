@@ -45,17 +45,6 @@ public class ProductModel {
 
     protected ProductModel(){};
 
-    @Override
-    public String toString() {
-        return "ProductModel{" +
-                "productModelNr=" + productModelNr +
-                ", categorie=" + categorie.getCategorieNaam() +
-                ", productModelNaam='" + productModelNaam + '\'' +
-                ", productModelMerk='" + productModelMerk + '\'' +
-                ", productModelFoto='" + productModelFoto + '\'' +
-                ", productModelBeschrijving='" + productModelBeschrijving + '\'' +
-                '}';
-    }
 
     public int getProductModelNr() {
         return productModelNr;

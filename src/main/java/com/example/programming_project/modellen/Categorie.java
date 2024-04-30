@@ -26,13 +26,6 @@ public class Categorie {
         this.categorieNaam = categorieNaam;
     }
 
-    @Override
-    public String toString() {
-        return "Categorie{" +
-                "categorieNr=" + categorieNr +
-                ", categorieNaam='" + categorieNaam + '\'' +
-                '}';
-    }
 
     public int getCategorieNr() {
         return categorieNr;

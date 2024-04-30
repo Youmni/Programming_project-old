@@ -24,14 +24,6 @@ public class ProductReservatie {
         this.reservatie = reservatie;
     }
 
-    @Override
-    public String toString() {
-        return "ProductReservaties{" +
-                "product=" + product +
-                ", reservatie=" + reservatie +
-                '}';
-    }
-
     public Product getProduct() {
         return product;
     }

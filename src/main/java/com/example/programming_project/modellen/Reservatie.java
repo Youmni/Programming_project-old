@@ -37,29 +37,25 @@ public class Reservatie {
     @Column(name="Reservatieopmerking")
     private String opmerking;
 
+    @Column(name="Status")
+    private String status;
+
     @OneToMany(mappedBy = "reservatie")
     private Set<ProductReservatie> productreservaties = new HashSet<>();
 
     protected Reservatie(){}
 
-    public Reservatie(int reservatieNr, Gebruiker gebruiker, LocalDate afhaalDatum, LocalDate retourDatum, LocalDate boekingDatum) {
+    public Reservatie(int reservatieNr, Gebruiker gebruiker, LocalDate afhaalDatum, LocalDate retourDatum, LocalDate boekingDatum, String reden, String opmerking, String status) {
         this.reservatieNr = reservatieNr;
         this.gebruiker = gebruiker;
         this.afhaalDatum = afhaalDatum;
         this.retourDatum = retourDatum;
         this.boekingDatum = boekingDatum;
+        this.reden = reden;
+        this.opmerking = opmerking;
+        this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "Reservatie{" +
-                "reservatieNr=" + reservatieNr +
-                ", gebruiker=" + gebruiker +
-                ", afhaalDatum=" + afhaalDatum +
-                ", retourDatum=" + retourDatum +
-                ", boekingDatum=" + boekingDatum +
-                '}';
-    }
 
     public int getReservatieNr() {
         return reservatieNr;
