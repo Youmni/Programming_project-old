@@ -47,7 +47,7 @@ public class ProductController {
         }
 
         @CrossOrigin
-        @GetMapping(value = "/naam/{naam}/status={status}")
+        @GetMapping(value = "/naam={naam}/status={status}")
         public List<Product> getAllProductenByNameAndStatus(@PathVariable(name = "naam") String naam,
                                                             @PathVariable(name = "status") String status) {
 
@@ -55,7 +55,7 @@ public class ProductController {
         }
 
         @CrossOrigin
-        @GetMapping(value = "/id/{id}/status={status}")
+        @GetMapping(value = "/id={id}/status={status}")
         public List<Product> getAllProductenByIdAndStatus(@PathVariable(name = "id") int id,
                                                             @PathVariable(name = "status") String status) {
 

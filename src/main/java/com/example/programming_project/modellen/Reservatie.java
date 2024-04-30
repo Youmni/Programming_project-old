@@ -28,14 +28,14 @@ public class Reservatie {
     @Column(name="Retourdatum")
     private LocalDate retourDatum;
 
-    //@Column(name="Reden")
-    //private String reden;
-
-    //@Column(name="Opmerking")
-    //private String opmerking;
-
     @Column(name="Boekingdatum")
     private LocalDate boekingDatum;
+
+    @Column(name="Reservatiereden")
+    private String reden;
+
+    @Column(name="Reservatieopmerking")
+    private String opmerking;
 
     @OneToMany(mappedBy = "reservatie")
     private Set<ProductReservatie> productreservaties = new HashSet<>();

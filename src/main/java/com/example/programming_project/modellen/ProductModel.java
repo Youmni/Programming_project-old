@@ -49,7 +49,7 @@ public class ProductModel {
     public String toString() {
         return "ProductModel{" +
                 "productModelNr=" + productModelNr +
-                ", categorieNr=" + categorie.getCategorieNr() +
+                ", categorie=" + categorie.getCategorieNaam() +
                 ", productModelNaam='" + productModelNaam + '\'' +
                 ", productModelMerk='" + productModelMerk + '\'' +
                 ", productModelFoto='" + productModelFoto + '\'' +
@@ -95,5 +95,13 @@ public class ProductModel {
 
     public void setProductModelBeschrijving(String productModelBeschrijving) {
         this.productModelBeschrijving = productModelBeschrijving;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 }
